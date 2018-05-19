@@ -1,0 +1,209 @@
+﻿<html>
+
+	<head>
+		<SCRIPT LANGUAGE="JavaScript">
+			<!--
+			function onload() {}
+
+			function fnChange() {}
+
+			function onClear() {
+				document.getElementById("vipurl").value = "";
+			}
+
+			function onPlay() {
+				var oJK = document.getElementById("jk");
+				var sJK = oJK.options[oJK.selectedIndex].value;
+				var sVipUrl = document.getElementById("vipurl").value;
+				var oWin = document.getElementById("play");
+				if(sVipUrl.length > 0) {
+					oWin.src = sJK + sVipUrl;
+				}
+			}
+		</SCRIPT>
+		<title> 免费VIP播放器网页版 </title>
+		<style>
+			#vipurl {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				line-height: 1;
+				font-size: 20px;
+				color: #06a072;
+				border-radius: 0;
+				width: 600px;
+				box-shadow: none;
+				border: 2px solid #06a072;
+				outline: none;
+				padding: 7px 5px;
+				position: relative;
+				position: inherit\9;
+				z-index: 2;
+				-webkit-appearance: none;
+			}
+			
+			#playurl {
+				text-align: center;
+			}
+			
+			#jk {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				background-color: #06a072;
+				color: white;
+				line-height: 1;
+				font-size: 20px;
+				border-radius: 0;
+				box-shadow: none;
+				border: 2px solid #06a072;
+				outline: none;
+				padding: 7px 5px;
+				position: relative;
+				position: inherit\9;
+				z-index: 2;
+				-webkit-appearance: none;
+				border-radius: 4px;
+			}
+			
+			#jk:hover {
+				background-color: #035b41;
+				
+				cursor: hand;
+			}
+			
+			#playbtn {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				line-height: 1;
+				background-color: #06a072;
+				font-size: 20px;
+				color: white;
+				border-radius: 0;
+				width: 100px;
+				box-shadow: none;
+				border: 0px solid #06a072;
+				outline: none;
+				padding: 7px 5px;
+				position: relative;
+				position: inherit\9;
+				z-index: 2;
+				-webkit-appearance: none;
+				border-radius: 4px;
+			}
+			
+			#playbtn:hover {
+				background-color: #035b41;
+				cursor: hand;
+			}
+			
+			#clean {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+				line-height: 1;
+				background-color: #06a072;
+				font-size: 20px;
+				color: white;
+				border-radius: 0;
+				width: 100px;
+				box-shadow: none;
+				border: 0px solid #06a072;
+				outline: none;
+				padding: 7px 5px;
+				position: relative;
+				position: inherit\9;
+				z-index: 2;
+				-webkit-appearance: none;
+				border-radius: 4px;
+			}
+			
+			#clean:hover {
+				background-color: #035b41;
+				cursor: hand;
+			}
+			
+			.language {
+				text-align: center;
+				margin: 0 auto;
+				position: relative;
+				top: 100px;
+			}
+			
+			.language .lan_bt {
+				width: 122px;
+				margin: 0 auto;
+				text-align: center;
+			}
+			
+			.language a span {
+				width: 14px;
+				height: 14px;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 5px;
+				/*background: url(style.png) no-repeat -195px -54px;*/
+			}
+			
+			.btn-outline2 {
+				background-color: #059d7f;
+				border: 3px solid #059d7f;
+				*height: 15px;
+				color: white;
+				*height: _15px;
+				margin-right: 29px;
+				padding-top: 5px;
+				padding-right: 20px;
+				padding-bottom: 5px;
+				padding-left: 20px;
+				text-decoration: none;
+				border-radius: 4px;
+			}
+			.btn-outline2:hover{
+				background-color: white;
+				border: 3px solid #059d7f;
+				*height: 15px;
+				color: #059d7f;
+				*height: _15px;
+				margin-right: 29px;
+				padding-top: 5px;
+				padding-right: 20px;
+				padding-bottom: 5px;
+				padding-left: 20px;
+				text-decoration: none;
+				border-radius: 4px;
+			}
+		</style>
+	</head>
+
+	<body onload="onload()" bgcolor=#ffffffff>
+		<table width="100%" align="center" height="100%" border="0" cellpadding="0" cellspacing="0">
+			<tr id="playurl">
+				<td height="9">
+					<form method="post" action="">
+						<select name="jk" id="jk" size=1 onchange="fnChange()">
+							<option value="http://api.1008net.com/v.php?url=" selected>腾讯专用</option>
+							<option value="http://api.nepian.com/ckparse/?url=" selected="selected">接口1</option>
+							<option value="http://jx.vgoodapi.com/jx.php?url=" >接口2</option>
+							<option value="http://api.xfsub.com/index.php?url=" >接口3</option>
+							<option value="http://jiexi.071811.cc/jx.php?url=" >接口4</option>
+							<option value="http://api.662820.com/xnflv/index.php?url=" >接口5</option>
+							<!--<option value="http://api.lequgirl.com/?url=" selected>接口7</option>-->
+						</select>
+						<input type="text" name="vipurl" id="vipurl" placeholder="复制各大视频网站播放页面链接到此框内,点击播放即可观看" value="">
+						<input type="button" id="playbtn" value="播放" onclick="onPlay()">
+						<input type="button" id="clean" value="清除" onclick="onClear()">
+					</form>
+				</td>
+			</tr>
+			<tr height="50px">
+				<div class="language">
+					<a class="btn btn-outline2" href="http://film.qq.com/" rel="nofollow" target="_blank">腾讯视频</a>
+					<a class="btn btn-outline2" href="http://vip.iqiyi.com/?fc=b4df9faa4b31aec4" rel="nofollow" target="_blank">爱奇艺视频</a>
+					<a class="btn btn-outline2" href="http://vip.youku.com/" rel="nofollow" target="_blank">优酷视频</a>
+					<a class="btn btn-outline2" href="http://vip.le.com/?ref=ym0101" rel="nofollow" target="_blank">乐视视频</a>
+					<a class="btn btn-outline2" href="https://www.mgtv.com/vip/" rel="nofollow" target="_blank">芒果视频</a>
+				</div>
+			</tr>
+			<tr>
+				<td style="text-align: center;">
+					<iframe src="" name="play" id="play" width="50%" height="70%" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>
+				</td>
+			</tr>
+		</table>
+	</body>
+
+</html>
